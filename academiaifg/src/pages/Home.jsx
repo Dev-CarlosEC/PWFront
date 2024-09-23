@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GlobalStyles from '../styles/GlobalStyles';
 
 const Home = () => {
@@ -13,7 +14,8 @@ const Home = () => {
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#contact">Contato</a></li>
-          <li><a href="/login">Login</a></li>
+          <li><Link to="/login">Login</Link></li>
+          <li><Link to="/workout">Treino</Link></li>
         </ul>
       </nav>
       <main>

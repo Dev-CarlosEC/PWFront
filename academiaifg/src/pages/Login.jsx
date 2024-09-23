@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import api from '../services/api';
 import useAuth from '../hooks/useAuth';
 import GlobalStyles from '../styles/GlobalStyles';
 
@@ -10,14 +11,21 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (CPF === '' || password === '') {
       setError('CPF e Senha são obrigatórios.');
       return;
     }
-    login({ CPF, password });
-    navigate('/');
+
+    try {
+      const response = await api.post('/api/token/', { CPF, password });
+      const { access, refresh } = response.data;
+      login({ CPF, access, refresh });
+      navigate('/workout');  // Redireciona para a página de treino após o login
+    } catch (error) {
+      setError('Credenciais inválidas.');
+    }
   };
 
   return (
@@ -45,6 +53,8 @@ const Login = () => {
           </div>
           <button type="submit">Login</button>
         </form>
+        <p></p>
+        <button onClick={() => navigate('/')}>Voltar para Home</button> {/* Botão para voltar para a página inicial */}
       </div>
     </>
   );

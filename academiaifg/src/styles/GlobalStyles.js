@@ -50,52 +50,61 @@ footer {
     width: 100%;
     bottom: 0;
 }
-.login-container {
-    max-width: 300px;
-    margin: 50px auto;
+      
+.login-container, .register-container, .workout-container {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .login-container h1, .register-container h1, .workout-container h1 {
     text-align: center;
-}
-
-.login-container h2 {
     margin-bottom: 20px;
-}
+  }
 
-.login-container label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-.login-container input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.login-container button {
+  .login-container input, .register-container input {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .login-container button, .register-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
-}
+  }
 
-.login-container button:hover {
+  .login-container button:hover, .register-container button:hover {
     background-color: #45a049;
-}
+  }
 
-.error-message {
-    color: red;
-    margin-top: 10px;
-}
+  .workout-container .exercise {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  .workout-container .exercise img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .workout-container .exercise h2 {
+    margin-top: 0;
+  }
 
 `;
 
