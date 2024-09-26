@@ -1,0 +1,1 @@
+api.js: Este código configura uma instância do axios que automaticamente adiciona um token de autenticação a todas as requisições, se o token estiver disponível. Isso é útil para garantir que todas as requisições ao backend sejam autenticadas de forma consistente.
