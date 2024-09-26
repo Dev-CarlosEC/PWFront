@@ -18,3 +18,24 @@ funções: ♤♤
    AuthContext.Provider: Provedor do contexto que passa os valores user, token, login e logout para os componentes filhos.
 ♤♤
 ++ O estado do User e Token são atualizados pelo login e removidos por logout 
+
+login.jsx Este código cria um formulário de login que autentica o usuário usando CPF e senha. Se a autenticação for bem-sucedida, o usuário é redirecionado para a página de treino. Em caso de erro, uma mensagem é exibida.
+
+funções:♤♤
+
+  handleSubmit: Função assíncrona que lida com o envio do formulário.
+  e.preventDefault(): Previne o comportamento padrão do formulário.
+Verifica se os campos CPF e password estão preenchidos.
+Faz uma requisição POST para /api/token/ com os dados do formulário.
+Se a requisição for bem-sucedida, chama a função login e redireciona para a página de treino.
+Em caso de erro, define uma mensagem de erro.
+Login: Componente funcional que gerencia o formulário de login.
+CPF e password: Estados para armazenar os valores dos campos de entrada.
+error: Estado para armazenar mensagens de erro.
+login: Função de login obtida do hook useAuth.
+navigate: Função para navegação programática.
+  useState: Hook que permite adicionar estado a componentes funcionais.
+ useNavigate: Hook do react-router-dom para navegação programática.
+api: Instância configurada do axios para fazer requisições HTTP (qualquer coisa leia la em cima o topico api.js)
+useAuth: Hook personalizado para gerenciar autenticação.
+GlobalStyles: Componente para aplicar estilos globais(css dentro de um arquivo jsx basicamente).
