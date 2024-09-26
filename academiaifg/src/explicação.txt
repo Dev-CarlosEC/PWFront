@@ -1,1 +1,20 @@
-api.js: Este código configura uma instância do axios que automaticamente adiciona um token de autenticação a todas as requisições, se o token estiver disponível. Isso é útil para garantir que todas as requisições ao backend sejam autenticadas de forma consistente.
+api.js: Este código configura uma instância do axios que automaticamente adiciona um token de autenticação a todas as requisições, se o token estiver disponível.  E útil para garantir que todas as requisições ao backend sejam autenticadas de forma consistente(não sei como o Alessandro gostaria de fazer mas é a forma que sei fazer).
+
+funções:♤♤ 
+   Interceptors permitem modificar requisições ou respostas antes que elas sejam enviadas ou recebidas.
+   config: O objeto de configuração da requisição.
+   useAuth(): Obtém o token de autenticação.
+Se o token existir, ele é adicionado ao cabeçalho da requisição (Authorization: Bearer ${token}).
+  Em caso de erro na configuração da requisição, a promessa é rejeitada.
+♤♤
+
+AuthContext.jsx código configura um contexto de autenticação que gerencia o estado do usuário e do token, permitindo login e logout, e persistindo esses dados no localStorage 
+funções: ♤♤
+   createContext: Função para criar um. contexto, que permite passar dados através da árvore de componentes sem precisar passar props manualmente em cada nível.
+   useState: Hook que permite adicionar estado a componentes funcionais.
+   useEffect: Hook que permite realizar efeitos colaterais em componentes funcionais, como buscar dados ou configurar um timer
+   AuthProvider: Componente que fornece o contexto de autenticação para seus filhos.
+   user e token: Estados que armazenam o usuário autenticado e o token de autenticação, respectivamente.
+   AuthContext.Provider: Provedor do contexto que passa os valores user, token, login e logout para os componentes filhos.
+♤♤
+++ O estado do User e Token são atualizados pelo login e removidos por logout 
