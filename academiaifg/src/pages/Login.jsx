@@ -11,9 +11,20 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
+  /**
+   * Função assíncrona que lida com o envio do formulário de login.
+   * @param {React.FormEvent<HTMLFormElement>} e - Evento de formulário.
+   * @returns {Promise<void>}
+   *
+   * Primeiramente, previne o comportamento padrão do formulário.
+   * Verifica se os campos CPF e password estão preenchidos.
+   * Faz uma requisição POST para /api/token/ com os dados do formulário.
+   * Se a requisição for bem-sucedida, chama a função login e redireciona para a página de treino.
+   * Em caso de erro, define uma mensagem de erro.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (CPF === '' || password === '') {
+    if (CPF === '') { // se necessario add password 
       setError('CPF e Senha são obrigatórios.');
       return;
     }

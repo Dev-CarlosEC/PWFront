@@ -2,12 +2,36 @@ import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import GlobalStyles from '../styles/GlobalStyles';
 
+/**
+ * Componente que renderiza uma lista de exercícios
+ *
+ * @returns {JSX.Element}
+ */
+
 const Workout = () => {
   const [exercises, setExercises] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
+  /**
+   * Fun o que busca a lista de exerc cios na API
+   *
+   * @async
+   *
+   * @returns {Promise<void>}
+   */
+
+
+    /**
+     * Busca a lista de exerc cios na API
+     *
+     * @async
+     *
+     * @returns {Promise<void>}
+     *
+     * @throws {Error} Erro ao carregar os exerc cios
+     */
     const fetchExercises = async () => {
       try {
         const response = await api.get('/api/exercises/');

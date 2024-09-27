@@ -1,4 +1,6 @@
-api.js: Este código configura uma instância do axios que automaticamente adiciona um token de autenticação a todas as requisições, se o token estiver disponível.  E útil para garantir que todas as requisições ao backend sejam autenticadas de forma consistente(não sei como o Alessandro gostaria de fazer mas é a forma que sei fazer).
+api.js: Este código configura uma instância do axios que automaticamente adiciona um token de autenticação
+ a todas as requisições, se o token estiver disponível.  E útil para garantir que todas as requisições ao 
+ backend sejam autenticadas de forma consistente(não sei como o Alessandro gostaria de fazer mas é a forma que sei fazer).
 
 funções:♤♤ 
    Interceptors permitem modificar requisições ou respostas antes que elas sejam enviadas ou recebidas.
@@ -19,7 +21,8 @@ funções: ♤♤
 ♤♤
 ++ O estado do User e Token são atualizados pelo login e removidos por logout 
 
-login.jsx Este código cria um formulário de login que autentica o usuário usando CPF e senha. Se a autenticação for bem-sucedida, o usuário é redirecionado para a página de treino. Em caso de erro, uma mensagem é exibida.
+login.jsx Este código cria um formulário de login que autentica o usuário usando CPF e senha.
+ Se a autenticação for bem-sucedida, o usuário é redirecionado para a página de treino. Em caso de erro, uma mensagem é exibida.
 
 funções:♤♤
 

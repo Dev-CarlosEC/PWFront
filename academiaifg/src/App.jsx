@@ -7,6 +7,21 @@ import Workout from './pages/Workout';
 import PrivateRoute from './components/PrivateRoute';
 import "./App.css";
 
+/**
+ * The main App component, which renders the main Routes for the application.
+ * This component is the root of the component tree.
+ * @returns {JSX.Element} The rendered App component.
+ * @example
+ * import React from 'react';
+ * import ReactDOM from 'react-dom';
+ * import App from './App';
+ * ReactDOM.render(
+ *     <React.StrictMode>
+ *         <App />
+ *     </React.StrictMode>,
+ *     document.getElementById('root')
+ * );
+ */
 function App() {
   return (
     <div className='App'>

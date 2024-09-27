@@ -2,7 +2,7 @@ import axios from 'axios';
 import useAuth from '../hooks/useAuth';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000',  // URL do backend
+  baseURL: 'http://localhost:http://localhost:8000/admin/login/?next=/admin/',  // URL do backend
 });
 
 api.interceptors.request.use(

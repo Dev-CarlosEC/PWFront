@@ -3,6 +3,22 @@ import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import GlobalStyles from '../styles/GlobalStyles';
 
+/**
+ * Componente que gerencia o formulário de registro
+ * 
+ * O formulário de registro tem os seguintes campos:
+ * - CPF
+ * - Senha
+ * - Nome
+ * - Telefone
+ * - Objetivo
+ * - Rua
+ * - Linha de Endereço
+ * - CEP
+ * - Cidade
+ * 
+ * @returns {JSX.Element} O formulário de registro
+ */
 const Register = () => {
   const [formData, setFormData] = useState({
     cpf: '',
@@ -18,6 +34,12 @@ const Register = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+
+  /**
+   * Handles the change of any input in the registration form
+   * 
+   * @param {Event} e The event triggered by the input change
+   */
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -25,6 +47,12 @@ const Register = () => {
     });
   };
 
+
+  /**
+   * Handles the form submission.
+   * @param {Event} e The form submission event.
+   * @returns {Promise<void>}
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
