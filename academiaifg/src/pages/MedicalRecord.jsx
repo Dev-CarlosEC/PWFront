@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import GlobalStyles from '../styles/GlobalStyles';
 
+
 /**
  * Componente que gerencia o formulário de registro
  * 
@@ -73,11 +74,11 @@ const MedicalRecord = () => {
   return (
     <>
       <GlobalStyles />
-      <div className='register-container'>
-        <h1>Registro</h1>
+      <div className='MedicalRecord-container'>
+        <h1>Preenchimento de formulário médico</h1>
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <form onSubmit={handleSubmit}>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="user_id"
@@ -86,7 +87,7 @@ const MedicalRecord = () => {
               placeholder="ID do Usuário"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="bodyFat"
@@ -95,7 +96,7 @@ const MedicalRecord = () => {
               placeholder="Percentual de Gordura"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="gender"
@@ -104,7 +105,7 @@ const MedicalRecord = () => {
               placeholder="Gênero"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="age"
@@ -113,7 +114,7 @@ const MedicalRecord = () => {
               placeholder="Idade"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="height"
@@ -122,7 +123,7 @@ const MedicalRecord = () => {
               placeholder="Altura"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="weight"
@@ -131,7 +132,7 @@ const MedicalRecord = () => {
               placeholder="Peso"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="chest_skinfold"
@@ -140,7 +141,7 @@ const MedicalRecord = () => {
               placeholder="Dobra Cutânea do Peito"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="abdominal_skinfold"
@@ -149,7 +150,7 @@ const MedicalRecord = () => {
               placeholder="Dobra Cutânea do Abdômen"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="thigh_skinfold"
@@ -158,7 +159,7 @@ const MedicalRecord = () => {
               placeholder="Dobra Cutânea da Coxa"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="subscapular_skinfold"
@@ -167,7 +168,7 @@ const MedicalRecord = () => {
               placeholder="Dobra Cutânea Subescapular"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="supra_iliac_skinfold"
@@ -176,7 +177,7 @@ const MedicalRecord = () => {
               placeholder="Dobra Cutânea Supra-Ilíaca"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="medicalConditions"
@@ -185,7 +186,7 @@ const MedicalRecord = () => {
               placeholder="Condições Médicas"
             />
           </div>
-          <div className='register-container input'>
+          <div className='MedicalRecord-container input'>
             <input
               type="text"
               name="takesMedication"
@@ -194,7 +195,7 @@ const MedicalRecord = () => {
               placeholder="Toma Medicamentos"
             />
           </div>
-          <button type="submit">Registrar</button>
+          <button type="submit">Salvar Informações</button>
         </form>
         <button onClick={() => navigate('/')}>Voltar para Home</button> {/* Botão para voltar para a página inicial */}
       </div>

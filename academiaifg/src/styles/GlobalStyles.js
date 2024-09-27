@@ -51,7 +51,7 @@ footer {
     bottom: 0;
 }
       
-.login-container, .register-container, .workout-container {
+.login-container, .register-container, .workout-container, .MedicalRecord-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -61,12 +61,12 @@ footer {
     background-color: #fff;
   }
 
-  .login-container h1, .register-container h1, .workout-container h1 {
+  .login-container h1, .register-container h1, .workout-container h1, .MedicalRecord-container h1 {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .login-container input, .register-container input {
+  .login-container input, .register-container input, .workout-container input, .MedicalRecord-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -74,7 +74,7 @@ footer {
     border-radius: 4px;
   }
 
-  .login-container button, .register-container button {
+  .login-container button, .register-container button, .workout-container button, .MedicalRecord-container button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -85,7 +85,7 @@ footer {
     cursor: pointer;
   }
 
-  .login-container button:hover, .register-container button:hover {
+  .login-container button:hover, .register-container button:hover, .workout-container button:hover, .MedicalRecord-container button:hover {
     background-color: #45a049;
   }
 
