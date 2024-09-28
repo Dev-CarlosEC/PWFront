@@ -15,7 +15,7 @@ import "./App.css";
  * The routes are as follows:
  * - /login: The login page.
  * - /register: The registration page.
- * - /: The home page, which is the main page of the application.
+ * - /: The home page, which is the 9main page of the application.
  * - /workout: The workout page, which is only accessible by logged-in users.
  *
  * The workout route is wrapped in a PrivateRoute component, which checks if the user is logged in before allowing them to access the page.
