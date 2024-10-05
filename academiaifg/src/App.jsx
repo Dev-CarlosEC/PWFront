@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Workout from './pages/Workout';
 import PrivateRoute from './components/PrivateRoute';
 import MedicalRecord from './pages/MedicalRecord';
+import Exercise from './pages/Exercise';
 import "./App.css";
 /**
  * The main App component.
@@ -29,8 +30,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
+        <Route path="/Exercise" element={<Exercise/>} />
         <Route path="/MedicalRecord" element={<MedicalRecord/>} />
         <Route path="/workout" element={
+        
           <PrivateRoute>
             <Workout />
           </PrivateRoute>
